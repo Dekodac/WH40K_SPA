@@ -28,7 +28,4 @@ The Warhammer 40k Commission Hub is a web application designed to connect Warham
 
 If you'd like to contribute, open an issue for any bugs or feature requests.
 
-## Acknowledgements
-
-- [OpenAI](https://openai.com/) for providing assistance with development.
   
