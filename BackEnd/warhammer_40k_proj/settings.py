@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Characters',
     'Users',
     'Profiles',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -144,4 +145,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#running server for website:
+#python manage.py runserver_plus --cert-file cert.pem --key-file key.pem 0.0.0.0:3000
 
