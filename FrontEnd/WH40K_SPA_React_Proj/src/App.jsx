@@ -5,6 +5,7 @@ import axios from 'axios'
 function App() {
   const [show, setShow] = useState(true);
   const [characters, setCharacters] = useState([]);
+  const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/characters/')
@@ -16,6 +17,12 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(false);
+    }, 2000); // Set the timeout based on your desired animation duration
+  }, []);
+
 
   return (
     <div>
@@ -24,19 +31,22 @@ function App() {
       <h1>Character Information</h1>
       <ul>
         {characters.map(character => (
-        <>
-        <li key={character.id}>
-          {console.log(character.char_img)}
-          {character.char_name} - {character.race} - {character.gender} - 
-        </li>
-          <img src={character.char_img} width={100} height={150} />
-        </>
-  ))}
-
-</ul>
-
+          <div key={character.id}>
+            <li>
+              {console.log(character.char_img)}
+              {character.char_name} - {character.race} - {character.gender} -
+            </li>
+            <img src={character.char_img} width={100} height={150} />
+          </div>
+        ))}
+      </ul>
+  <div>
+    <div id='leftDoor'>left door</div>
+    between doors
+    <div id='rightDoor'>right door</div>
+  </div>
     </div>
-  );
-}
-
+  
+)
+};
 export default App
