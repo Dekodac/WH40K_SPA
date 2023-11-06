@@ -8,7 +8,7 @@ function App() {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
-    axios.get('http://10.0.0.39:3000:characters/')
+    axios.get('http://10.0.0.39:3000/characters/')
       .then(response => {
         setCharacters(response.data);
       })
