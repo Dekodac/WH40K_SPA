@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+#rightDoor {
+  height: 50vh;
+  width: 50vw;
+  background-color: whitesmoke;
+  animation-duration: 5s;
+  animation-name: slideRight;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideRight {
+
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 200%;
+  }
+}
