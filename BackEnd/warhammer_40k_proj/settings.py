@@ -24,12 +24,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #For development process
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','10.0.0.39','10.0.0.47','0.0.0.0']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -65,6 +66,8 @@ SECURE_SSL_REDIRECT = True
 
 REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES':[
     'rest_framework.permissions.AllowAny']}
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
