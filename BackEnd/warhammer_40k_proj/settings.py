@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','10.0.0.39','10.0.0.47']
+ALLOWED_HOSTS = ['127.0.0.1','10.0.0.39','10.0.0.47','0.0.0.0']
 
 
 # Application definition
@@ -59,6 +59,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+
+SECURE_SSL_REDIRECT = True
 
 REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES':[
     'rest_framework.permissions.AllowAny']}
