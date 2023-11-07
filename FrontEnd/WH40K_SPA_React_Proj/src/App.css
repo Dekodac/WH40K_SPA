@@ -1,17 +1,8 @@
  #root {
-  background-color: rgb(50, 50, 50);
+  background-color: #292f36;
    margin: 0 auto;
   text-align: center; 
 } 
-
-#rightDoor {
-  height: 50vh;
-  width: 50vw;
-  background-color: whitesmoke;
-  animation-duration: 5s;
-  animation-name: slideRight;
-  animation-fill-mode: forwards;
-}
 
 @keyframes slideRight {
 
@@ -24,9 +15,7 @@
 }
 
 .navcontain {
-  border: 5px,solid,black;
   background-color: darkred;
-  text-shadow: slategray;
    top: 0px;
    width: 100%;
    z-index: 999;
@@ -34,6 +23,11 @@
 
 ul {
   list-style-type: none;
+}
+
+.about-text-body {
+  color: #a50104;
+  text-shadow: rgb(2, 2, 1) 1px 0 10px;
 }
 
 .gall {
@@ -49,4 +43,20 @@ ul {
   font-weight: bolder;
 }
 
+.flex-box {
+  display: flex;
+  flex-flow: row wrap;
+}
 
+.flex-box #myCarousel{
+  flex: 1 1 50%
+}
+
+.flex-box #desc {
+  flex: 1 1 50%;
+}
+
+/* COLOR SCHEME:
+  READABLE Black: 292f36
+  Gold: e59500
+  Red: a50104 */
