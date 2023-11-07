@@ -15,7 +15,7 @@ class Character(models.Model):
     ]
 
     char_name = models.CharField(max_length=50, unique=True, null=False)
-    race = models.CharField(max_length=10, null=False)
+    race = models.CharField(max_length=20, null=False)
     faction = models.CharField(max_length=50, null=False, choices=FACTION_CHOICES)
     gender = models.CharField(max_length=10, null=False, choices=GENDER_CHOICES)
     is_magical = models.BooleanField(default=False, null=False)

@@ -1,28 +1,36 @@
-import { CharacterContext } from "./CharacterContext";
-import { useContext } from "react";
+import React, { useContext } from 'react';
+import { Card, Button } from 'react-bootstrap';
+import { CharacterContext } from './CharacterContext';
+
+const CharacterCard = ({ character }) => {
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={character.char_img} />
+      <Card.Body>
+        <Card.Title>{character.char_name}</Card.Title>
+        <Card.Text>
+          Race: {character.race}<br />
+          Gender: {character.gender}<br />
+          Magical: {character.is_magical ? "Yes" : "No"}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
+}
 
 const Gallery = () => {
   const { characters } = useContext(CharacterContext);
 
   return (
-    <div className="gall">
-        <h1>Gallery</h1>
-        <div>
-      <h2>Finished Characters:</h2>
+    <>
+      {characters.map((character) => (
+        <div >
+        <CharacterCard key={character.id} character={character} />
         </div>
-      <ul>
-        {characters.map((character) => (
-          <li key={character.id}>
-            <h2>{character.char_name}</h2>
-            <img src={character.char_img} alt={character.char_name} width={'100vh'}/>
-            <p>Race : {character.race}</p>
-            <p>Gender : {character.gender}</p>
-            <p>Magical? : {character.is_magical ? "Yes" : "No"}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+      ))}
+    </>
   );
-};
+}
 
 export default Gallery;
