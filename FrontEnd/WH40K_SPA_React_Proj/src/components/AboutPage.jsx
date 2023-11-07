@@ -2,6 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 const AboutPage = () =>{
     return(
         <>
+        <div className='about-text-body'>
         <div>
             <h1>About Warhammer Characters and Figurine Painting</h1>
         </div>
@@ -24,6 +25,7 @@ const AboutPage = () =>{
         </div>
         <div>
             <h2>The Art of Figurine Painting</h2>
+        </div>
         </div>
     <div>
     <Accordion >
@@ -58,14 +60,61 @@ const AboutPage = () =>{
       </Accordion.Item>
     </Accordion>
     </div>
+    <div className='about-text-body'>
 
     <h2>Join the Warhammer Community</h2>
-<p>We encourage you to explore the rich tapestry of Warhammer, from assembling armies to engaging in epic battles on the tabletop. The process of painting figurines is not just a hobby, but an art form that allows you to truly make the universe your own.</p>
+        <p>We encourage you to explore the rich tapestry of Warhammer, from assembling armies to engaging in epic battles on the tabletop. The process of painting figurines is not just a hobby, but an art form that allows you to truly make the universe your own.</p>
 
     <h3>Get Started</h3>
     <p>
     Ready to embark on your Warhammer painting journey? Check out tutorials here:
     </p>
+    </div>
+    <div>
+    <div className="container-fluid"> 
+  <div className="row">
+    <div className="flex-box">
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div className="carousel-inner">
+          <div className="item active">
+            <iframe width="100%" height="345" src="https://www.youtube.com/embed/RkqR5sxOTr4?si=LuBG9FnYteRj0c87">
+    </iframe>
+          </div>
+
+          <div className="item">
+           <iframe width="100%" height="345" src="https://www.youtube.com/embed/S7-At4qVC84?si=vSbiBTjyxgGfALZe">
+    </iframe>
+          </div>
+
+          <div className="item">
+            <iframe width="100%" height="345" src="https://www.youtube.com/embed/LLJwh4ClZ6U?si=WTgiblenegwop0WM">
+    </iframe>
+          </div>
+        </div>
+
+        <a className="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span className="glyphicon glyphicon-chevron-left"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="right carousel-control" href="#myCarousel" data-slide="next">
+          <span className="glyphicon glyphicon-chevron-right"></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+     
+      <div id="desc" style={{background: 'orangered', color: 'white'}}>
+        <h3>Description</h3>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
         </>
     );
 }
