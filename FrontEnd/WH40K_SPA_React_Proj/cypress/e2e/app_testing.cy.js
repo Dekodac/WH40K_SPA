@@ -12,7 +12,8 @@ describe('Test_1_NavBar_On_HomePage', () => {
 
 describe('Test_2_API_Getting_characters', () => {
 
-  it('Should get the character information ') () => {
+  it('Should get the character information', () => {
     // Visit the URL where your app is running
     cy.visit('http://localhost:5173/');
-})
+});
+});

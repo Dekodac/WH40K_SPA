@@ -8,3 +8,5 @@ __pycache__/
 *.py[cod]
 
 .pem
+# Local Netlify folder
+.netlify
