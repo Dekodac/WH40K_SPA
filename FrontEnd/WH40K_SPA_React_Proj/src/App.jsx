@@ -11,7 +11,7 @@ function App() {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
-    axios.get('http://10.0.0.39:3000/characters/')
+    axios.get('http://0.0.0.0:3000/characters/')
       .then(response => {
         setCharacters(response.data);
       })
@@ -20,11 +20,14 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(false);
-    }, 2000); // Set the timeout based on your desired animation duration
-  }, []);
+
+  //TODO: THIS IS FOR ANIMATION FOR HOMEPAGE DOORS
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setAnimate(false);
+  //   }, 2000); // Set the timeout based on your desired animation duration
+  // }, []);
 
 
   return(
@@ -33,7 +36,6 @@ function App() {
     <CharacterContext.Provider value={{characters,setCharacters}}>
     <Outlet/>
     </CharacterContext.Provider>
-    
     </>
 
   )

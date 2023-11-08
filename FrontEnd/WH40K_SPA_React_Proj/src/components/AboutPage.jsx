@@ -1,7 +1,10 @@
 import Accordion from 'react-bootstrap/Accordion';
+
 const AboutPage = () =>{
+
     return(
         <>
+        <div className='h-screen flex flex-col gap-4 justify-center items-center pt-10'>
         <div className='about-text-body'>
         <div>
             <h1>About Warhammer Characters and Figurine Painting</h1>
@@ -70,6 +73,11 @@ const AboutPage = () =>{
     Ready to embark on your Warhammer painting journey? Check out tutorials here:
     </p>
     </div>
+    </div>
+
+
+    {/* !!!Delete everything below!!!! WE USE REACT BOOTSTRAP CAROUSEL VVVV */}
+
     <div>
     <div className="container-fluid"> 
   <div className="row">
