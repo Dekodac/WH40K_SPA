@@ -2,6 +2,10 @@
 
 # Warhammer 40k Single Page Application
 
+# Current In-Work:
+
+**User Accounts/Auth**
+
 ## Overview
 
 The Warhammer 40k Commission Hub is a web application designed to connect Warhammer 40k enthusiasts and artists. It provides a platform for users to create accounts, showcase their Warhammer 40k characters, and offer commission services to the community.
