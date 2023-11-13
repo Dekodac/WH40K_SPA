@@ -30,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 ]
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES':[
     'rest_framework.permissions.AllowAny']}
